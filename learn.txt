@@ -15,3 +15,5 @@ git reflog 查看所有的修改记录（和git log 不同，git log显示的是
 git diff head -- learn.txt 查看工作区和版本库中最新的区别
 
 git checkout -- readme.txt 回到上一次commit 或者 add之前的状态
+
+xxxxxxxx
