@@ -30,6 +30,10 @@ git merge xxx 将xxx合并到当前分支git
 git branch -d xxx 删除某一个分支
 
 git log --graph --pretty=oneline --abbrev-commit    git参数abbrev-commit显示短commit id
+git merge -no-ff -m 'xxx提交信息' xxx  参数xxx是要被合并到当前分支的分支名称，此种方式合并，在合并后可以看出曾经合并过，默认使用fast-forward方式合并，合并后无法看出曾经合并过
 
+git stash 将当前的工作现场存储起来
+git stash list 查看当前的stash列表
+git stash pop 恢复现场并删除stash
+git stash apply 恢复现场但是不删除stash, 删除通过git stash drop
 
-xxxxxx no fast forward
