@@ -29,4 +29,4 @@ git checkout -b xxx 从当前分支上checkout一个名字叫xxx的新分支，�
 git merge xxx 将xxx合并到当前分支git
 git branch -d xxx 删除某一个分支
 
-merge test1
+merge test3
