@@ -1,4 +1,11 @@
-first line 
-second line 
-third line 
-forth line 
+git 命令
+
+git add xxxx.xx 添加file到暂存区
+git commit -m "git 提交到本地仓库"
+git diff xxxx.xxxx 查看文件的改动内容
+git status 查看文件状态
+git log 查看提交记录
+git log --pretty=oneline 以行形式查看提交记录（更美观）
+git reset --hard head^ 回退到上一个版本，head^^ 上上个版本， ^个数表示回退几个版本，太多的话可以使用 git reset --hard head~100 指定数字
+git reset --hard xxxxxx(commit id) 回退到指定的commit id
+git reflog 查看所有的修改记录（和git log 不同，git log显示的是提交线，回滚后后面的版本看不到）
