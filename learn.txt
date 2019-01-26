@@ -1,19 +1,26 @@
 git 命令
 
+
+1. 本地仓库管理
 git add xxxx.xx 添加file到暂存区
 git commit -m "git 提交到本地仓库"
 git diff xxxx.xxxx 查看文件的改动内容
 git status 查看文件状态
 git log 查看提交记录
 git log --pretty=oneline 以行形式查看提交记录（更美观）
-git reset --hard head^ 回退到上一个版本，head^^ 上上个版本， ^个数表示回退几个版本，太多的话可以使用 git reset --hard head~100 指定数字
+git reset --hard head^ 回退到上一个版本，head^^ 上上个版本， ^个数表示回退几个版本，太多的话可以使用 git reset --hard head~100 指定数字   （回退commit）
 git reset --hard xxxxxx(commit id) 回退到指定的commit id
 git reflog 查看所有的修改记录（和git log 不同，git log显示的是提交线，回滚后后面的版本看不到）
-
-需要区分stage,和repo
-
 git diff head -- learn.txt 查看工作区和版本库中最新的区别
+git checkout -- readme.txt 回到上一次commit 或者 add之前的状态 (回退工作区)
+git reset head .\learn.txt 撤销暂存区的修改 （回退暂存区）
+git rm xxxx.xxx 和add相对，删除某个文件，commit生效，否则都是在暂存区
 
-git checkout -- readme.txt 回到上一次commit 或者 add之前的状态
 
-xxxxxxxx
+2. 远程仓库操作：
+git remote add origin xxxx远程仓库地址 , 如果使用git@github.com:xchendeveloper/learngit.git //即git@开头的协议，需要在git服务器配置ssh公钥
+git push -u origin master 第一次推送，通过-u参数使本地分支和远程分支产生关联
+
+3. 分支管理
+git checkout -b xxx 从当前分支上checkout一个名字叫xxx的新分支
+git branch 查看有哪些分支，当前分支的名字前面有一个*号
