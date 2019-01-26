@@ -32,4 +32,4 @@ git branch -d xxx 删除某一个分支
 git log --graph --pretty=oneline --abbrev-commit    git参数abbrev-commit显示短commit id
 
 
-xxxxxx fast forword
+xxxxxx no fast forward
