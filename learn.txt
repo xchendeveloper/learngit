@@ -12,4 +12,4 @@ git reflog 查看所有的修改记录（和git log 不同，git log显示的是
 
 需要区分stage,和repo
 
-git diff head -- learn.txt
+git diff head -- learn.txt 查看工作区和版本库中最新的区别
