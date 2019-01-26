@@ -21,16 +21,18 @@ git rm xxxx.xxx 和add相对，删除某个文件，commit生效，否则都是�
 git remote 查看远程分支
 git remote -v 查看远程分支更详细内容
 git remote add origin xxxx远程仓库地址 , 如果使用git@github.com:xchendeveloper/learngit.git //即git@开头的协议，需要在git服务器配置ssh公钥
-git push -u origin master origin为远程仓库名，master是本地分支名,第一次推送，通过-u参数使本地分支和远程分支产生关联，后面就可以直接使用git push,而不需要指定origin和master了
+git push -u origin master origin为远程仓库名，master是本地分支名,第一次推送，通过-u参数使本地分支和远程分支产生关联，后面就可以直接使用git push,而不需要指定origin和master了,并且，如果远程仓库不存在此分支，则会自动新建此分支
 
 3. 分支管理
 git branch 查看有哪些分支，当前分支的名字前面有一个*号
 git branch xxx 创建xxx分支
 git checkout xxxx 切换到某一个分支
 git checkout -b xxx 从当前分支上checkout一个名字叫xxx的新分支，并切换到xxx分支，相当于git branch xxx 再 git checkout xxx
+git checkout -b xxx origin/dev 从远程分支拉取dev分支
 git merge xxx 将xxx合并到当前分支git
 git branch -d xxx 删除某一个分支
 git branch -D xxxx 在一个分支还没有合并时，使用-d无法删除，需要使用-D强制删除
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的连接
 
 git log --graph --pretty=oneline --abbrev-commit    git参数abbrev-commit显示短commit id
 git merge -no-ff -m 'xxx提交信息' xxx  参数xxx是要被合并到当前分支的分支名称，此种方式合并，在合并后可以看出曾经合并过，默认使用fast-forward方式合并，合并后无法看出曾经合并过
@@ -39,6 +41,9 @@ git stash 将当前的工作现场存储起来，包括在暂存区的内容，�
 git stash list 查看当前的stash列表
 git stash pop 恢复现场并删除stash
 git stash apply 恢复现场但是不删除stash, 删除通过git stash drop
+
+
+git rebase
 
 
 
