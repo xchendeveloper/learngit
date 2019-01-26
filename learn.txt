@@ -11,3 +11,5 @@ git reset --hard xxxxxx(commit id) 回退到指定的commit id
 git reflog 查看所有的修改记录（和git log 不同，git log显示的是提交线，回滚后后面的版本看不到）
 
 需要区分stage,和repo
+
+git diff head -- learn.txt
