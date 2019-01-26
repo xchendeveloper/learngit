@@ -22,5 +22,11 @@ git remote add origin xxxx远程仓库地址 , 如果使用git@github.com:xchend
 git push -u origin master 第一次推送，通过-u参数使本地分支和远程分支产生关联
 
 3. 分支管理
-git checkout -b xxx 从当前分支上checkout一个名字叫xxx的新分支
 git branch 查看有哪些分支，当前分支的名字前面有一个*号
+git branch xxx 创建xxx分支
+git checkout xxxx 切换到某一个分支
+git checkout -b xxx 从当前分支上checkout一个名字叫xxx的新分支，并切换到xxx分支，相当于git branch xxx 再 git checkout xxx
+git merge xxx 将xxx合并到当前分支git
+git branch -d xxx 删除某一个分支
+
+merge test1
